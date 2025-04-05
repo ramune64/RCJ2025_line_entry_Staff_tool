@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>RCJ Rescue Line Entry 2025</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/style.css" type="text/css">
+</head>
+<body>
+    <div class="court_design">
+    <h1>コート設計</h1>
+    <table id="edit_tools">
+        <tr>
+            <td><img src="static/img/straight.png" alt=""></td>
+            <td><img src="static/img/circle.png" alt=""></td>
+            <td><img src="static/img/Right_angle.png" alt=""></td>
+            <td><img src="static/img/rotate.png" alt=""></td>
+            <td><img src="static/img/nyuru.png" alt=""></td>
+            <td><img src="static/img/naname.png" alt=""></td>
+            <td><img src="static/img/naname_fake.png" alt=""></td>
+            <td><img src="static/img/curve.png" alt=""></td>
+            <td><img src="static/img/curve_v2.png" alt=""></td>
+            <td><img src="static/img/zigzag.png" alt=""></td>
+            <td><img src="static/img/start.png" alt=""></td>
+            <td><img src="static/img/nami1.png" alt=""></td>
+            <td><img src="static/img/nami2.png" alt=""></td>
+        </tr>
+        <tr>
+            <td><img src="static/img/bump.png" alt=""></td>
+            <td><img src="static/img/gap.png" alt=""></td>
+            <td><img src="static/img/slope.png" alt=""></td>
+            <td><img src="static/img/Obstacle.png" alt=""></td>
+            <td><img src="static/img/cp.png" alt=""></td>
+            <td><img src="static/img/silver.png" alt=""></td>
+            <td><img src="static/img/black_vic.png" alt=""></td>
+            <td><img src="static/img/green_vic.png" alt=""></td>
+            <td class="back_blown"><img src="static/img/blown.png" alt=""></td>
+            <td><img src="static/img/kyomu.png" alt=""></td>
+            <td><img src="static/img/select.png" alt=""></td>
+            <td><img src="static/img/select_cancel.png" alt=""></td>
+        </tr>
+    </table>
+    <table id="control">
+        <tr>
+            <td><img src="static/img/right_arrow.png" alt="" style="rotate: -90deg;" id="up"></td>
+            <td><img src="static/img/right_arrow.png" alt="" style="rotate: 180deg;" id="go_left"></td>
+            <td><img src="static/img/rotate_left.png" alt="" id="turn_left"></td>
+            <td><img src="static/img/rotate_left_45.png" alt="" id="turn_left_45"></td>
+            <td><img src="static/img/rotate_right_45.png" alt="" id="turn_right_45"></td>
+            <td><img src="static/img/rotate_right.png" alt="" id="turn_right"></td>
+            <td><img src="static/img/right_arrow.png" alt="" style="rotate: 0deg;" id="go_right"></td>
+            <td><img src="static/img/right_arrow.png" alt="" style="rotate: 90deg;" id="down"></td>
+            <td><img src="static/img/reset.png" alt="" id="reset_dayo"></td>
+        </tr>
+    </table>
+    <section class="detail">
+        <div>
+            <table id="field">
+                <tr>
+                    <td class="rescue"></td>
+                    <td class="rescue"><a href='javascript:view_gimick("緑被災者",1)'><img src="static/img/green_vic.png" alt="" class="vic" id="green1"></a></td>
+                    <td class="rescue"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="rescue"></td>
+                    <td class="rescue"></td>
+                    <td class="rescue"><a href='javascript:view_gimick("黒被災者",2)'><img src="static/img/black_vic.png" alt="" class="vic" id="black2"></a></td>
+                    <td></td>
+                    <td><img src="static/img/circle.png" alt=""></td>
+                    <td><a href='javascript:view_gimick("傾斜路",1)'><img src="static/img/slope.png" alt="" style="rotate: 90deg;"></a></td>
+                    <td><img src="static/img/straight.png" alt="" style="rotate: 90deg;"><img src="static/img/cp.png" alt="" class="ab cp" id="cp_2"></td>
+                    <td><img src="static/img/straight.png" alt="" style="rotate: 90deg;"></td>
+                    <td><img src="static/img/circle2.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td class="rescue"><a href='javascript:view_gimick("緑被災者",2)'><img src="static/img/green_vic.png" alt="" class="vic" id="green2"></a></td>
+                    <td class="rescue"></td>
+                    <td class="rescue"></td>
+                    <td></td>
+                    <td><a href='javascript:view_gimick("傾斜路",2)'><img src="static/img/slope.png" alt=""></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="static/img/straight.png" alt=""><a href='javascript:view_gimick("バンプ",3)'><img src="static/img/bump.png" alt="" class="ab bump" id="bp_3st"></a></td>
+                </tr>
+                <tr>
+                    <td class="rescue"></td>
+                    <td class="rescue"></td>
+                    <td class="rescue double"><a href='javascript:view_gimick("黒被災者",1)'><img src="static/img/black_vic.png" alt="" class="vic" id="black1"></a><img src="static/img/silver.png" alt="" style="rotate: -90deg;"></td>
+                    <td><img src="static/img/Right_angle.png" alt="" style="rotate: 90deg;"><img src="static/img/cp.png" alt="" class="ab cp" id="cp_6"></td>
+                    <td><img src="static/img/Right_angle.png" alt="" style="rotate: -90deg;"><img src="static/img/cp.png" alt="" class="ab cp" id="cp_3"></td>
+                    <td><img src="static/img/circle.png" alt="" style="rotate: 90deg;"><a href='javascript:view_gimick("バンプ",1)'><img src="static/img/bump.png" alt="" class="ab bump" id="bp_1st"></a></td>
+                    <td><img src="static/img/circle.png" alt=""></td>
+                    <td><img src="static/img/naname.png" alt="" style="rotate: 90deg;"></td>
+                    <td><img src="static/img/straight.png" alt=""><a href='javascript:view_gimick("バンプ",2)'><img src="static/img/bump.png" alt="" class="ab bump" id="bp_2st"></a></td>
+                </tr>
+                <tr>
+                    <td><img src="static/img/Right_angle.png" alt=""><img src="static/img/cp.png" alt="" class="ab cp" id="cp_5"></td>
+                    <td><img src="static/img/zigzag.png" alt=""></td>
+                    <td><a href='javascript:view_gimick("ギャップ",2)'><img src="static/img/gap.png" alt="" style="rotate: 90deg;"></a></td>
+                    <td><img src="static/img/curve.png" alt="" style="rotate: 90deg;"></td>
+                    <td><img src="static/img/circle.png" alt="" style="rotate: 0deg;"></td>
+                    <td><img src="static/img/circle.png" alt="" style="rotate: 180deg;"></td>
+                    <td><a href='javascript:view_gimick("ギャップ",1)'><img src='static/img/gap.png' alt=""></a></td>
+                    <td><img src="static/img/naname.png" alt="" style="rotate: -90deg;"></td>
+                    <td><img src="static/img/naname2.png" alt="" style="rotate: 90deg;"></td>
+                </tr>
+                <tr>
+                    <td><img src="static/img/circle.png" alt="" style="rotate: -90deg;"></td>
+                    <td><img src="static/img/straight.png" alt="" style="rotate: 90deg;"><a href='javascript:view_gimick("障害物",2)'><img src="static/img/Obstacle.png" alt="" class="ab ob" id="ob_1st"></a></td>
+                    <td><img src="static/img/nyuru.png" alt=""></td>
+                    <td><img src="static/img/curve_v2.png" alt=""></td>
+                    <td><img src="static/img/naname_fake2.png" alt=""></td>
+                    <td><img src="static/img/rotate2.png" alt=""></td>
+                    <td><img src="static/img/straight.png" alt=""><img src="static/img/cp.png" alt="" class="ab cp" id="cp_1"></td>
+                    <td><img src="static/img/circle.png" alt=""></td>
+                    <td><img src="static/img/Right_angle2.png" alt=""></td>
+                </tr>
+                <tr><!-- 6 -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="static/img/Right_angle.png" alt="" style="rotate: -90deg;"><img src="static/img/cp.png" alt="" class="ab cp" id="cp_4"></td>
+                    <td><img src="static/img/nami1.png" alt="" style="rotate: 90deg;"></td>
+                    <td><img src="static/img/circle.png" alt="" style="rotate: 180deg;"></td>
+                    <td><img src="static/img/circle.png" alt="" style="rotate: -90deg;"></td>
+                    <td><img src="static/img/circle2.png" alt="" style="rotate: 90deg;"></td>
+                    <td><img src="static/img/start.png" alt=""></td>
+                </tr>
+            </table>
+        </div>
+<!-- ここまで -->
+
+        <!-- <div>
+            <p>aaaaa</p>
+        </div> -->
+    </section>
+    <form action="" method="post" id="form1">
+        <h3>詳細</h3>
+        <p><b>チェックポイントの数(スタートタイルを除く):</b></p>
+        <div id="input_num_ch">
+            <input type="number" id="num_checkpoint" name="num_checkpoint" maxlength="8" size="10" min="0" required />
+        </div>
+            <p><b>チェックポイントごとのタイル数<br>(チェックポイントがあるタイルの次のタイルからカウント次のチェックポイントがあるタイルまで)</b></p>
+        <!-- <p class="ch_p">S~1:</p>
+        <input type="number" id="ch_p_S_1" name="num_checkpoint" maxlength="8" size="10" required />
+        <p class="ch_p">1~2:</p>
+        <input type="number" id="ch_p_1_2" name="num_checkpoint" maxlength="8" size="10" required /> -->
+
+        <p><input type="submit" value="完了" id="submit_button"></p>
+    </form>
+    </div>
+    <div class="scoring" id="scoring">
+        <h2>各チェックポイントへの到達に要した回数</h2>
+        <h3>何回目で成功したかを入力</h3>
+        <table id="scoring_table" border="1">
+            <tr>
+                <th>✖</th>
+                <th>回数</th>
+                <th>タイル</th>
+                <th>得点</th>
+                <th>値を固定する</th>
+            </tr>
+            <tr>
+                <th>S</th>
+                <th>✖</th>
+                <th>スタートした:<input type="checkbox" id="started_or_no"></th>
+                <th class="scores" id="start_point">0</th>
+                <th><input type="checkbox" disabled="disabled" checked='checked'></th>
+            </tr>
+        </table>
+    </div>
+    <div id="court_list">
+        <h2>コートを開く</h2>
+    </div>
+    <script src="/static/app.js" type="module"></script>
+</body>
+</html>

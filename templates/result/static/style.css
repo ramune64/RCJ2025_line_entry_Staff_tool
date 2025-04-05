@@ -1,0 +1,342 @@
+h1{
+    color: blueviolet;
+}
+body{
+    margin-bottom: 200px;
+    text-align: center;
+}
+.court_design{
+    text-align: center;
+}
+.detail{
+    display: flex;
+    & div{
+        margin: 0 auto 0 auto;
+    }
+}
+table#field{
+    border-spacing: 0;
+    margin:0 auto;
+}
+table#field td{
+    position: relative;
+    align-items: center;
+    justify-items: center;
+    width: 60px !important;
+    height: 60px !important;
+    border: 2px solid rgba(0, 0, 0, 0.512);
+    object-fit:cover;
+    margin: 0;
+    & img{
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    & img.ab{
+        display: block;
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    & img.cp,img.ob{
+        width: 40%;
+        height: 40%;
+    }
+    & img.bump{
+        width: 90%;
+        height: 90%;
+        transform-origin: center;
+    }
+    & img.vic{
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        z-index: 2;
+        max-width: none; /* 制約解除 */
+        max-height: none; /* 制約解除 */
+    }
+}
+
+#ob_1st{
+    top: 50%;
+}
+
+#bp_1st{
+    top: 15px;
+    left: -40px;
+    rotate: 135deg;
+}
+#bp_2st{
+    top: 20px;
+    left: 30px;
+    rotate: 0deg;
+}
+#bp_3st{
+    top: 50px;
+    left: 14px;
+    rotate: 30deg;
+}
+
+
+#cp_1,#cp_2,#cp_5{
+    top: 14px;
+    left: 14px;
+}
+#cp_3,#cp_4{
+    top: 45px;
+    left: 15px;
+}
+#cp_6{
+    top: 14px;
+    left: 46px;
+}
+
+#black1{
+    top: 33px;
+    left: 0px;
+    rotate: -90deg;
+}
+#black2{
+    top: 20px;
+    left: 5px;
+    rotate: 0deg;
+}
+#green2{
+    top: 25px;
+    left: 20px;
+    rotate: 0deg;
+}
+#green1{
+    top: 30px;
+    left: -5px;
+    rotate: 0deg;
+}
+
+
+/* table#field td:hover{
+    background-color: aqua;
+} */
+
+form p{
+    margin: 0;
+    font-size: 15pt;
+}
+.ng{
+    display: flex;
+    justify-content: center;
+}
+.flexbox{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    & div{
+        margin: 0 10px;
+    }
+}
+.red{
+    color: red;
+}
+
+.scoring{
+    text-align: center;
+    & table{
+        margin: 10px auto;
+        & th,td{
+            width: 140px;
+            height: 50px;
+        }
+    }
+    display: none;
+}
+input[type=checkbox] {
+    transform: scale(2);
+}
+
+.margin_top_20px{
+    margin-top: 20px;
+}
+.panels_num,#max_point2,#max_point,.gimick_note{
+    display: none;
+}
+#started_or_no ,#escape{
+    margin:0 10px;
+}
+#gimick_clear_check{
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding: 10px;
+    display: none;
+    border: 3px solid red;
+    top: 200px;
+    right: 100px;
+    & h2{
+        margin: 5px;
+    }
+    & p{
+        margin: 5px;
+    }
+}
+#vic_clear_check{
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding: 10px;
+    /* visibility: hidden; */
+    display: none;
+    border: 3px solid red;
+    top: 200px;
+    right: 100px;
+    & h2{
+        margin: 5px;
+    }
+    & p{
+        margin: 5px;
+    }
+    & input{
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+}
+
+
+
+
+@keyframes tenmetsu{
+    0%{
+        background-color: rgba(255, 0, 0, 0.321);
+    }
+    50%{
+        background-color: rgba(255, 0, 0, 0);
+    }
+    100%{
+        background-color: rgba(255, 0, 0, 0.321);
+    }
+}
+.clear_circle{
+    transform-origin: center center;
+    position: absolute;
+    transform: translateX(0%) translateY(-100%);
+    z-index: -1;
+}
+.clear_circle2{
+    transform-origin: center center;
+    position: absolute;
+    transform: translateX(-50%) translateY(-100%);
+    z-index: -1;
+}
+.clear_circle3{
+    transform-origin: center center;
+    position: absolute;
+    transform: translateX(0%) translateY(-50%);
+    z-index: -1;
+}
+.midashi{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    position: relative;
+}
+.close{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 0px;
+}
+
+canvas {
+    border: 1px solid black;
+    cursor: crosshair;
+    touch-action: none; /* タッチ操作でスクロールを防止 */
+}
+button#clearButton,button#clearButton2,button#clearButton3 {
+    position: absolute;
+    margin-top: 250px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+input.last_decision {
+    padding: 10px;
+    font-size: 15px;
+}
+input.last_button{
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media print {
+    .noprint {
+        display: none;  /* 印刷時に非表示にする */
+    }
+    /* ページの縮尺を変更 */
+    @page {
+        size: A4;  /* 用紙サイズを指定 */
+        margin: 0;  /* 印刷マージンをゼロに */
+    }
+
+    body {
+        margin: 20mm;  /* 印刷時の余白を指定 */
+        zoom: 85%;
+        -webkit-print-color-adjust: exact; /* Webkit系ブラウザ向け */
+        print-color-adjust: exact; /* その他のブラウザ向け */
+    }
+    canvas{
+        zoom: 25%;
+    }
+    table{
+        zoom: 70%;
+    }
+    .nocopy{
+        display: none;
+    }
+    .copy_flex{
+        justify-content: center;
+        display: flex;
+    }
+    h2.sign{
+        font-size: 15pt;
+    }
+    /* 必要に応じて要素の非表示やスタイルを変更 */
+}
+
+
+
+h2.sign{
+    font-size: 15pt;
+}
+#copy{
+    padding:20px 40px;
+    margin: 0 auto;
+    cursor:pointer;
+}
+
+.rescue{
+    background-color: rgba(165, 42, 42, 0.382);
+}
+#alert{
+    display: none;
+    width: 250px;
+    height: 180px;
+    border: 3px solid red;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    box-shadow: 20px 20px 5px -10px gray;
+    z-index: 100;
+    transform: translateX(-50%) translateY(-50%);
+}
+button.last_check{
+    height: 50px;
+    font-size: 15pt;
+    margin: 0 10px;
+    background-color: tomato;
+    cursor: pointer;
+}
+
+button.last_check:hover{
+    box-shadow: 5px 5px 5px -5px gray;
+}

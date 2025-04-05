@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>RCJ Rescue Line Entry 2025</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/style.css" type="text/css">
+</head>
+<body>
+    <div class="court_design">
+    <h1>フィールド</h1>
+    <div id="alert">
+            <h2>この内容で確定させていいですか？</h2>
+            <button class="last_check" id="cancel">キャンセル</button><button class="last_check" id="accept">OK</button>
+    </div>
+        <div id="gimick_clear_check" class="noprint">
+            <div class="midashi">
+                <a href="javascript:close()"><img src="static/img/failed.png" alt="" class="close"></a>
+                <h2 id="kind"></h2>
+            </div>
+            <p>クリアしたらチェック</p>
+            <div>
+                <input type="checkbox" class="clear" id="gimicks_box">
+            </div>
+        </div>
+        <div id="vic_clear_check" class="noprint">
+            <div class="midashi">
+                <a href="javascript:close()"><img src="static/img/failed.png" alt="" class="close"></a>
+                <h2 id="kind_vic"></h2>
+            </div>
+            <div class="flexbox">
+            <p><b>発見</b>したらチェック➡</p>
+                <div>
+                    <input type="checkbox" class="clear" id="vic_box1">
+                </div>
+            </div>
+            <div class="flexbox">
+                <p><b>識別</b>に成功したらチェック➡</p>
+                    <div>
+                        <input type="checkbox" class="clear" id="vic_box2">
+                    </div>
+                </div>
+        </div>
+        <table id="field">

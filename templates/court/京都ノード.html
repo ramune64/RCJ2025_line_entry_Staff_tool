@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>RCJ Rescue Line Entry 2025</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/style.css" type="text/css">
+</head>
+<body>
+    <div class="court_design">
+    <h1>フィールド</h1>
+    <div id="alert">
+            <h2>この内容で確定させていいですか？</h2>
+            <button class="last_check" id="cancel">キャンセル</button><button class="last_check" id="accept">OK</button>
+    </div>
+        <div id="gimick_clear_check" class="noprint">
+            <div class="midashi">
+                <a href="javascript:close()"><img src="static/img/failed.png" alt="" class="close"></a>
+                <h2 id="kind"></h2>
+            </div>
+            <p>クリアしたらチェック</p>
+            <div>
+                <input type="checkbox" class="clear" id="gimicks_box">
+            </div>
+        </div>
+        <div id="vic_clear_check" class="noprint">
+            <div class="midashi">
+                <a href="javascript:close()"><img src="static/img/failed.png" alt="" class="close"></a>
+                <h2 id="kind_vic"></h2>
+            </div>
+            <div class="flexbox">
+            <p><b>発見</b>したらチェック➡</p>
+                <div>
+                    <input type="checkbox" class="clear" id="vic_box1">
+                </div>
+            </div>
+            <div class="flexbox">
+                <p><b>識別</b>に成功したらチェック➡</p>
+                    <div>
+                        <input type="checkbox" class="clear" id="vic_box2">
+                    </div>
+                </div>
+        </div>
+        <table id="field"><div class="panels_num">5</div><div class="panels_num">10</div><div class="panels_num">4</div><div class="panels_num">8</div><div class="panels_num">5</div><div class="panels_num">4</div><div class="gimick_note">2</div><div class="gimick_note">2</div><div class="gimick_note">3</div><div class="gimick_note">1</div><div class="gimick_note">2</div><div class="gimick_note">2</div><div id="max_point">405</div>
+                <tr>
+                    <td class="rescue"></td>
+                    <td class="rescue"><a href="javascript:view_gimick(&quot;緑被災者&quot;,1)"><img src="static/img/green_vic.png" alt="" class="vic" id="green1"></a></td>
+                    <td class="rescue"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="rescue"></td>
+                    <td class="rescue"></td>
+                    <td class="rescue"><a href="javascript:view_gimick(&quot;黒被災者&quot;,2)"><img src="static/img/black_vic.png" alt="" class="vic" id="black2"></a></td>
+                    <td></td>
+                    <td><img src="static/img/circle.png" alt=""></td>
+                    <td><a href="javascript:view_gimick(&quot;傾斜路&quot;,1)"><img src="static/img/slope.png" alt="" style="rotate: 90deg;"></a></td>
+                    <td><img src="static/img/straight.png" alt="" style="rotate: 90deg;"><img src="static/img/cp.png" alt="" class="ab cp" id="cp_2"></td>
+                    <td><img src="static/img/straight.png" alt="" style="rotate: 90deg;"></td>
+                    <td><img src="static/img/circle2.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td class="rescue"><a href="javascript:view_gimick(&quot;緑被災者&quot;,2)"><img src="static/img/green_vic.png" alt="" class="vic" id="green2"></a></td>
+                    <td class="rescue"></td>
+                    <td class="rescue"></td>
+                    <td></td>
+                    <td><a href="javascript:view_gimick(&quot;傾斜路&quot;,2)"><img src="static/img/slope.png" alt=""></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="static/img/straight.png" alt=""><a href="javascript:view_gimick(&quot;バンプ&quot;,3)"><img src="static/img/bump.png" alt="" class="ab bump" id="bp_3st"></a></td>
+                </tr>
+                <tr>
+                    <td class="rescue"></td>
+                    <td class="rescue"></td>
+                    <td class="rescue double"><a href="javascript:view_gimick(&quot;黒被災者&quot;,1)"><img src="static/img/black_vic.png" alt="" class="vic" id="black1"></a><img src="static/img/silver.png" alt="" style="rotate: -90deg;"></td>
+                    <td><img src="static/img/Right_angle.png" alt="" style="rotate: 90deg;"><img src="static/img/cp.png" alt="" class="ab cp" id="cp_6"></td>
+                    <td><img src="static/img/Right_angle.png" alt="" style="rotate: -90deg;"><img src="static/img/cp.png" alt="" class="ab cp" id="cp_3"></td>
+                    <td><img src="static/img/circle.png" alt="" style="rotate: 90deg;"><a href="javascript:view_gimick(&quot;バンプ&quot;,1)"><img src="static/img/bump.png" alt="" class="ab bump" id="bp_1st"></a></td>
+                    <td><img src="static/img/circle.png" alt=""></td>
+                    <td><img src="static/img/naname.png" alt="" style="rotate: 90deg;"></td>
+                    <td><img src="static/img/straight.png" alt=""><a href="javascript:view_gimick(&quot;バンプ&quot;,2)"><img src="static/img/bump.png" alt="" class="ab bump" id="bp_2st"></a></td>
+                </tr>
+                <tr>
+                    <td><img src="static/img/Right_angle.png" alt=""><img src="static/img/cp.png" alt="" class="ab cp" id="cp_5"></td>
+                    <td><img src="static/img/zigzag.png" alt=""></td>
+                    <td><a href="javascript:view_gimick(&quot;ギャップ&quot;,2)"><img src="static/img/gap.png" alt="" style="rotate: 90deg;"></a></td>
+                    <td><img src="static/img/curve.png" alt="" style="rotate: 90deg;"></td>
+                    <td><img src="static/img/circle.png" alt="" style="rotate: 0deg;"></td>
+                    <td><img src="static/img/circle.png" alt="" style="rotate: 180deg;"></td>
+                    <td><a href="javascript:view_gimick(&quot;ギャップ&quot;,1)"><img src="static/img/gap.png" alt=""></a></td>
+                    <td><img src="static/img/naname.png" alt="" style="rotate: -90deg;"></td>
+                    <td><img src="static/img/naname2.png" alt="" style="rotate: 90deg;"></td>
+                </tr>
+                <tr>
+                    <td><img src="static/img/circle.png" alt="" style="rotate: -90deg;"></td>
+                    <td><img src="static/img/straight.png" alt="" style="rotate: 90deg;"><a href="javascript:view_gimick(&quot;障害物&quot;,1)"><img src="static/img/Obstacle.png" alt="" class="ab ob" id="ob_1st"></a></td>
+                    <td><img src="static/img/nyuru.png" alt=""></td>
+                    <td><img src="static/img/curve_v2.png" alt=""></td>
+                    <td><img src="static/img/naname_fake2.png" alt=""></td>
+                    <td><img src="static/img/rotate2.png" alt=""></td>
+                    <td><img src="static/img/straight.png" alt=""><img src="static/img/cp.png" alt="" class="ab cp" id="cp_1"></td>
+                    <td><img src="static/img/circle.png" alt=""></td>
+                    <td><img src="static/img/Right_angle2.png" alt=""></td>
+                </tr>
+                <tr><!-- 6 -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="static/img/Right_angle.png" alt="" style="rotate: -90deg;"><img src="static/img/cp.png" alt="" class="ab cp" id="cp_4"></td>
+                    <td><img src="static/img/nami1.png" alt="" style="rotate: 90deg;"></td>
+                    <td><img src="static/img/circle.png" alt="" style="rotate: 180deg;"></td>
+                    <td><img src="static/img/circle.png" alt="" style="rotate: -90deg;"></td>
+                    <td><img src="static/img/circle2.png" alt="" style="rotate: 90deg;"></td>
+                    <td><img src="static/img/start.png" alt=""></td>
+                </tr>
+            </table><p class="margin_top_20px"><b>チーム名</b></p><form action="#" method="post" id="form3"><input type="text" id="team" name="team" size="40" required /><br><label for="">チーム番号:</label><input type="number" max="10" min="1" id="num_times" required /><br><input type="submit" id="st_scoreing" value="採点画面へ"></form></div><div class="scoring" id="scoring">
+        <h2>各チェックポイントへの到達に要した回数</h2>
+        <h3>何回目で成功したかを入力</h3>
+        <table id="scoring_table" border="1">
+            <tr>
+                <th>✖</th>
+                <th>回数</th>
+                <th>タイル</th>
+                <th>得点</th>
+                <th>値を固定する</th>
+            </tr>
+            <tr>
+                <th>S</th>
+                <th>✖</th>
+                <th>スタートした:<input type="checkbox" id="started_or_no"></th>
+                <th class="scores" id="start_point">0</th>
+                <th><input type="checkbox" disabled="disabled" checked="checked"></th>
+            </tr>
+        <tr><th>S~1</th><td></td><th>5枚</th><th class="scores"></th><th><input type="checkbox"></th></tr><tr><th>1~2</th><td></td><th>10枚</th><th class="scores"></th><th><input type="checkbox"></th></tr><tr><th>2~3</th><td></td><th>4枚</th><th class="scores"></th><th><input type="checkbox"></th></tr><tr><th>3~4</th><td></td><th>8枚</th><th class="scores"></th><th><input type="checkbox"></th></tr><tr><th>4~5</th><td></td><th>5枚</th><th class="scores"></th><th><input type="checkbox"></th></tr><tr><th>5~6</th><td></td><th>4枚</th><th class="scores"></th><th><input type="checkbox"></th></tr><tr><th>脱出</th><th>✖</th><th>脱出完了:<input type="checkbox" id="escape"></th><th class="scores" id="escape_point">0</th><th><input type="checkbox" disabled="disabled" checked="checked"></th></tr></table>
+    </div><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script><script src="/static/app.js"></script><script src="/static/app2.js"></script></body></html>
